@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Todo Planner</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- Header Banner -->
+<header class="todo-header">
+  <h1>Todo App</h1>
+</header>
+
+<div class="todo-planner">
+
+  <!-- Filter Buttons -->
+  <section class="task-filters">
+    <button class="filter-btn active">Today</button>
+    <button class="filter-btn">Pending</button>
+    <button class="filter-btn">Overdue</button>
+  </section>
+
+  <!-- Task Header -->
+  <section class="task-header">
+    <h2>Tasks</h2>
+    <button id="addTaskBtn">
+      <i class="fa-solid fa-circle-plus"></i> Add Task
+    </button>
+  </section>
+
+  <!-- Task List -->
+  <section class="task-section">
+    <ul class="todo-list">
+
+      <!-- Task Item -->
+      <li class="todo-item">
+
+        <input type="checkbox" class="todo-checkbox">
+
+        <span class="todo-text">Draft Project Proposal</span>
+
+        <span class="todo-date">
+          <i class="fa-regular fa-clock"></i> Tue Oct 17 2023
+        </span>
+
+        <i class="fa-solid fa-pen edit-icon"></i>
+
+        <span class="status-dot overdue"></span>
+
+      </li>
+
+      <li class="todo-item">
+
+        <input type="checkbox" class="todo-checkbox">
+
+        <span class="todo-text">Take Trash Out</span>
+
+        <span class="todo-date">
+          <i class="fa-regular fa-clock"></i> Wed Oct 18 2023
+        </span>
+
+        <i class="fa-solid fa-pen edit-icon"></i>
+
+        <span class="status-dot pending"></span>
+
+      </li>
+
+      <li class="todo-item">
+
+        <input type="checkbox" class="todo-checkbox">
+
+        <span class="todo-text">Get Groceries</span>
+
+        <span class="todo-date">
+          <i class="fa-regular fa-clock"></i> Wed Oct 18 2023
+        </span>
+
+        <i class="fa-solid fa-pen edit-icon"></i>
+
+        <span class="status-dot pending"></span>
+
+      </li>
+
+      <li class="todo-item">
+
+        <input type="checkbox" class="todo-checkbox">
+
+        <span class="todo-text">Send Mail</span>
+
+        <span class="todo-date">
+          <i class="fa-regular fa-clock"></i> Wed Oct 18 2023
+        </span>
+
+        <i class="fa-solid fa-pen edit-icon"></i>
+
+        <span class="status-dot pending"></span>
+
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- Completed Section -->
+  <section class="completed-section">
+    <h3>Completed ▲</h3>
+  </section>
+
+</div>
+
+<!-- Modal -->
+<div class="modal" id="taskModal">
+
+  <div class="modal-content">
+
+    <h3>Add New Task</h3>
+
+    <div class="input-group">
+      <label>Task Name</label>
+      <input type="text" id="taskName" placeholder="Enter task name">
+    </div>
+
+    <div class="input-group">
+      <label>Due Date</label>
+      <input type="date" id="taskDate">
+    </div>
+
+    <div class="modal-buttons">
+      <button id="saveTask">Add Task</button>
+      <button id="cancelTask">Cancel</button>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
